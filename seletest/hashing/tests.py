@@ -7,7 +7,7 @@ class FunctionalTestCase(TestCase):
         self.browser = webdriver.Safari()
 
     def test_there_is_homepage(self):
-        browser.get('http://localhost:8000')
+        self.browser.get('http://localhost:8000')
         # assert browser.page_source.find('install')
         self.assertIn('install', self.browser.page_source)
 
