@@ -12,5 +12,8 @@ class FunctionalTestCase(TestCase):
         # self.assertIn('install', self.browser.page_source)
         self.assertIn('Enter hash here', self.browser.page_source)
 
+    def tesh_hash_of_hello(self):
+        self.browser.get('http://localhost:8000')
+
     def tearDown(self):
         self.browser.quit()
