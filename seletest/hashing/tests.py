@@ -14,6 +14,8 @@ class FunctionalTestCase(TestCase):
 
     def tesh_hash_of_hello(self):
         self.browser.get('http://localhost:8000')
+        text = self.browser.find_element_by_id('id_text')
+        test.send_keys('hello')
 
     def tearDown(self):
         self.browser.quit()
