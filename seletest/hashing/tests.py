@@ -1,6 +1,7 @@
 from django.test import TestCase
 from selenium import webdriver
 from .forms import HashForm
+import hashlib
 
 # Create your tests here.
 # class FunctionalTestCase(TestCase):
