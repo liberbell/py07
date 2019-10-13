@@ -32,4 +32,4 @@ class UnitTestCase(TestCase):
 
     def test_hash_form(self):
         form = HashForm(data={'text':'Hello'})
-        self.assertTrue(form.is_valid)
+        self.assertTrue(form.is_valid())
