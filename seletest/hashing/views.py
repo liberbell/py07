@@ -3,4 +3,5 @@ from .forms import HashForm
 
 # Create your views here.
 def home(request):
-    return render(request, 'hashing/home.html')
+    forms = HashForm()
+    return render(request, 'hashing/home.html', {'form':form})
