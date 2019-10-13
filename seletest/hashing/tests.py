@@ -24,6 +24,7 @@ from selenium import webdriver
 #         self.browser.quit()
 
 class UnitTestCase(TestCase):
+
     def test_home_homepage_template(self):
         response = self.client.get('/')
-        self.assrtTemplateUsed(response, 'hashing/home.html')
+        self.assertTemplateUsed(response, 'hashing/home.html')
