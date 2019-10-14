@@ -10,5 +10,12 @@ def home(request):
         if filled_form.is_valid():
             text = filled_form.cleaned_data('text')
             text_hash = hashlib.sha256(text.encode('utf-8')).hexdigest()
+            try:
+                Hash.objects.get(hash=text_hash)
+            except Hash.DoesNotExist:
+                hash = Hash()
+                hash.text = text
+                hash.hash = text_hash
+                
     form = HashForm()
     return render(request, 'hashing/home.html', {'form':form})
