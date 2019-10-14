@@ -16,6 +16,7 @@ def home(request):
                 hash = Hash()
                 hash.text = text
                 hash.hash = text_hash
-                
+                hash.save()
+
     form = HashForm()
     return render(request, 'hashing/home.html', {'form':form})
