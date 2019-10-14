@@ -37,4 +37,4 @@ class UnitTestCase(TestCase):
 
     def test_hash_func_works(self):
         text_hash = hashlib.sha256('hello'.encode('utf-8')).hexdigest()
-        self.assertEqual('2CF24DBA5FB0A30E26E83B2AC5B9E29E1B161E5C1FA7425E73043362938B9824', text_hash)
+        self.assertEqual('2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824', text_hash)
