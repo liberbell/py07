@@ -58,4 +58,4 @@ class UnitTestCase(TestCase):
     def test_viewing(self):
         hash = self.saveHash()
         response = self.client.get('/hash/2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824')
-        self.asserContains(response, 'hello')
+        self.assertContains(response, 'hello')
