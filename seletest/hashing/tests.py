@@ -47,13 +47,6 @@ class UnitTestCase(TestCase):
         hash.save()
         return hash
 
-    # def saveHash(self):
-    #     hash = self.saveHash()
-    #     hash.text = 'hello'
-    #     hash.hash = '2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824'
-    #     hash.save()
-    #     return hash
-
     def test_hash_object(self):
         hash = self.saveHash()
         pulled_hash = Hash.objects.get(hash='2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824')
