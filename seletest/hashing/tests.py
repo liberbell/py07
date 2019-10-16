@@ -4,7 +4,7 @@ from .forms import HashForm
 import hashlib
 from .models import Hash
 
-Create your tests here.
+# Create your tests here.
 class FunctionalTestCase(TestCase):
     def setUp(self):
         self.browser = webdriver.Safari()
