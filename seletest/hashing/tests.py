@@ -3,6 +3,7 @@ from selenium import webdriver
 from .forms import HashForm
 import hashlib
 from .models import Hash
+from django.core.exceptions import validationError
 
 # Create your tests here.
 class FunctionalTestCase(TestCase):
