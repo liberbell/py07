@@ -8,7 +8,7 @@ from django.core.exceptions import ValidationError
 # Create your tests here.
 class FunctionalTestCase(TestCase):
     def setUp(self):
-        self.browser = webdriver.Chrome()
+        self.browser = webdriver.Firefox()
 
     def test_there_is_homepage(self):
         self.browser.get('http://localhost:8000')
