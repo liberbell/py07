@@ -19,14 +19,14 @@ class FunctionalTestCase(TestCase):
     def tesh_hash_of_hello(self):
         self.browser.get('http://localhost:8000')
         text = self.browser.find_element_by_id('id_text')
-        test.send_keys('hello')
+        text.send_keys('hello')
         self.browser.find_element_by_name('submit').click()
         self.assertIn('2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824', self.browser.page_source)
 
     def test_hash_ajax(self):
         self.browser.get('http://localhost:8000')
         text = self.browser.find_element_by_id('id_text')
-        test.send_keys('hello')
+        text.send_keys('hello')
         self.assertIn('2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824', self.browser.page_source)
 
     def tearDown(self):
