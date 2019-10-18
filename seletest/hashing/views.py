@@ -28,5 +28,5 @@ def hash(request, hash):
     return render(request, 'hashing/hash.html', {'hash':hash})
 
 def quickhash(request):
-    text = request.GET('text')
+    text = request.GET['text']
     return JsonResponse({'hash':hashlib.sha256(text.encode('utf-8')).hexdigest()})
