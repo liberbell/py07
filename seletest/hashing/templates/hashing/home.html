@@ -5,6 +5,7 @@
 </form>
 
 <h2 id="quickhash"></h2>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
   $('#id_text').keyup(function () {
@@ -18,7 +19,7 @@
       dataType: 'json',
       success: function (data) {
         $('#quickhash').text(data['hash']);
-      },
+      }
     });
   });
 </script>
