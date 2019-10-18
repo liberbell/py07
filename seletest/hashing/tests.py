@@ -6,15 +6,12 @@ from .models import Hash
 from django.core.exceptions import ValidationError
 import time
 
-# Create your tests here.
 class FunctionalTestCase(TestCase):
     def setUp(self):
         self.browser = webdriver.Safari()
 
     def test_there_is_homepage(self):
         self.browser.get('http://localhost:8000')
-        # assert browser.page_source.find('install')
-        # self.assertIn('install', self.browser.page_source)
         self.assertIn('Enter hash here', self.browser.page_source)
 
     def test_hash_of_hello(self):
