@@ -16,7 +16,7 @@ class FunctionalTestCase(TestCase):
         # self.assertIn('install', self.browser.page_source)
         self.assertIn('Enter hash here', self.browser.page_source)
 
-    def tesh_hash_of_hello(self):
+    def test_hash_of_hello(self):
         self.browser.get('http://localhost:8000')
         text = self.browser.find_element_by_id('id_text')
         text.send_keys('hello')
